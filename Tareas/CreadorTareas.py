@@ -1,4 +1,5 @@
-from Tareas import TipoTarea
+from Tareas.TipoTarea import TipoTarea
+from Tareas.Tipo import Tipo
 from Tareas.Splitter import Splitter
 from Tareas.Distributor import Distributor
 from Tareas.Replicator import Replicator
