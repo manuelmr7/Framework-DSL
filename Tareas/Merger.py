@@ -1,8 +1,9 @@
 from Tareas.Tarea import Tarea
-
+from Tareas.Tipo import Tipo
 
 class Merger(Tarea):
-    clave = "merger"
+    def __init__(self, entradas, salidas):
+        super().__init__(entradas, salidas, Tipo.ENRUTADORA)
 
     def ejecutar(self):
         pass
