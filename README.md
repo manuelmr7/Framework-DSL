@@ -94,4 +94,4 @@ print(salida1.get_longitud_mensaje(), salida2.get_longitud_mensaje())  # 1 1
 
 ## Autor
 
-Manuel Muñoz — Universidad de Huelva
+Manuel Martín Rodrigo
