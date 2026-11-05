@@ -44,13 +44,13 @@ Framework/
 | Tarea | Función | Estado |
 |---|---|---|
 | Replicator | Copia cada mensaje a todas las salidas | Implementada |
-| Merger | Reúne los mensajes de varias entradas en una salida | Pendiente |
+| Merger | Reúne los mensajes de varias entradas en una salida | Implementado |
 | Splitter | Divide un mensaje en fragmentos mediante un xpath | Pendiente |
 | Distribuidor | Envía cada mensaje a una salida según condiciones xpath | Pendiente |
-| Translator | Transforma el cuerpo con una plantilla XSLT | Pendiente |
+| Translator | Transforma el cuerpo con una plantilla XSLT | Implementado |
 | Correlator | Agrupa mensajes relacionados por un xpath | Pendiente |
 | CorrelationIdSetter | Asigna el id de correlación a mensajes relacionados | Pendiente |
-| ContextEnricher | Completa un mensaje con datos de otro | Pendiente |
+| ContextEnricher | Completa un mensaje con datos de otro | Implementado |
 | Aggregator | Reconstruye un mensaje a partir de sus fragmentos | Pendiente |
 
 ## Requisitos e instalación
