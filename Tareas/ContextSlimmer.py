@@ -1,3 +1,8 @@
-class ContextSlimmer:
-    def __init__(self):
+from Tareas.Tarea import Tarea
+
+
+class ContextSlimmer(Tarea):
+    clave = "contextslimmer"
+
+    def ejecutar(self):
         pass

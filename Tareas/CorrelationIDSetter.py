@@ -1,3 +1,8 @@
-class CorrelationIDSetter:
-    def __init__(self):
+from Tareas.Tarea import Tarea
+
+
+class CorrelationIDSetter(Tarea):
+    clave = "correlationidsetter"
+
+    def ejecutar(self):
         pass

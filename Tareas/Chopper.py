@@ -1,3 +1,8 @@
-class Chopper:
-    def __init__(self):
+from Tareas.Tarea import Tarea
+
+
+class Chopper(Tarea):
+    clave = "chopper"
+
+    def ejecutar(self):
         pass

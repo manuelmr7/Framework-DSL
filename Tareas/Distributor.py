@@ -1,3 +1,8 @@
-class Distributor:
-    def __init__(self):
+from Tareas.Tarea import Tarea
+
+
+class Distributor(Tarea):
+    clave = "distributor"
+
+    def ejecutar(self):
         pass

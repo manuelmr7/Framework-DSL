@@ -1,3 +1,8 @@
-class ReturnAddressSetter:
-    def __init__(self):
+from Tareas.Tarea import Tarea
+
+
+class ReturnAddressSetter(Tarea):
+    clave = "returnadresssetter"
+
+    def ejecutar(self):
         pass
