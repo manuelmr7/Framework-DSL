@@ -10,12 +10,6 @@ from Tareas.ContextSlimmer import ContextSlimmer
 from Tareas.Merger import Merger
 from Tareas.Aggregator import Aggregator
 from Tareas.Filter import Filter
-from Tareas.Slimmer import Slimmer
-from Tareas.Chopper import Chopper
-from Tareas.Assembler import Assembler
-from Tareas.HeaderPromoter import HeaderPromoter
-from Tareas.ReturnAddressSetter import ReturnAddressSetter
-from Tareas.Threader import Threader
 
 
 class CreadorTareas:
@@ -30,12 +24,6 @@ class CreadorTareas:
         TipoTarea.MERGER: Merger,
         TipoTarea.AGGREGATOR: Aggregator,
         TipoTarea.FILTER: Filter,
-        TipoTarea.SLIMMER: Slimmer,
-        TipoTarea.CHOPPER: Chopper,
-        TipoTarea.ASSEMBLER: Assembler,
-        TipoTarea.HEADER_PROMOTER: HeaderPromoter,
-        TipoTarea.RETURN_ADDRESS_SETTER: ReturnAddressSetter,
-        TipoTarea.THREADER: Threader,
 
     }
 
