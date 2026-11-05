@@ -6,7 +6,7 @@ from Tareas.Replicator import Replicator
 from Tareas.Translator import Translator
 from Tareas.Correlator import Correlator
 from Tareas.CorrelationIDSetter import CorrelationIDSetter
-from Tareas.ContextSlimmer import ContextSlimmer
+from Tareas.ContextEnricher import ContextSlimmer
 from Tareas.Merger import Merger
 from Tareas.Aggregator import Aggregator
 from Tareas.Filter import Filter
