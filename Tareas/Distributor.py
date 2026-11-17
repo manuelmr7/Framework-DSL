@@ -6,5 +6,5 @@ class Distributor(Tarea):
         super().__init__(entradas, salidas, Tipo.ENRUTADORA)
         self._lista_xpath = list(lista_xpath)
 
-    def ejecutar(self):
+    def ejecutar(self): #reparte cada mensaje a una salida según una condición xpath.
         pass

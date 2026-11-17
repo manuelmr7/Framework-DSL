@@ -6,7 +6,7 @@ from Tareas.Replicator import Replicator
 from Tareas.Translator import Translator
 from Tareas.Correlator import Correlator
 from Tareas.CorrelationIDSetter import CorrelationIDSetter
-from Tareas.ContextEnricher import ContextSlimmer
+from Tareas.ContextEnricher import ContextEnricher
 from Tareas.Merger import Merger
 from Tareas.Aggregator import Aggregator
 from Tareas.Filter import Filter
@@ -20,7 +20,7 @@ class CreadorTareas:
         TipoTarea.TRANSLATOR: Translator,
         TipoTarea.CORRELATOR: Correlator,
         TipoTarea.CORRELATION_ID_SETTER: CorrelationIDSetter,
-        TipoTarea.CONTEXT_ENRICHER: ContextSlimmer,
+        TipoTarea.CONTEXT_ENRICHER: ContextEnricher,
         TipoTarea.MERGER: Merger,
         TipoTarea.AGGREGATOR: Aggregator,
         TipoTarea.FILTER: Filter,

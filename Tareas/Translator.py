@@ -8,7 +8,7 @@ class Translator(Tarea):
         super().__init__(entradas,salidas,Tipo.TRANSFORMADORA)
         self.ruta_archivo_xslt=ruta_archivo_xslt
 
-    def ejecutar(self):
+    def ejecutar(self): #transforma el cuerpo del mensaje aplicando una plantilla XSLT.
         xslt=etree.XSLT(etree.parse(self._ruta_archivo_xslt))
         entrada=self._lista_entradas[0]
         salida=self._lista_salidas[0]

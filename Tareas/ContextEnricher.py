@@ -6,7 +6,7 @@ class ContextEnricher(Tarea):
     def __init__(self, entradas, salidas):
         super().__init__(entradas, salidas, Tipo.MODIFIER)
 
-    def ejecutar(self):
+    def ejecutar(self): #añade a un mensaje datos que llegan en otro.
         principal = self._lista_entradas[0]
         contexto = self._lista_entradas[1]
         salida = self._lista_salidas[0]

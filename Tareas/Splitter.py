@@ -7,5 +7,5 @@ class Splitter(Tarea):
         super().__init__(entradas, salidas, Tipo.ROUTER)  # pon el Tipo que le corresponda en tu diseño
         self._xpath = xpath
 
-    def ejecutar(self):
+    def ejecutar(self): #divide un mensaje en varios, uno por cada elemento que encuentre el xpath.
         pass
