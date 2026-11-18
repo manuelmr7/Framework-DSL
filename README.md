@@ -45,7 +45,7 @@ Framework/
 |---|---|---|
 | Replicator | Copia cada mensaje a todas las salidas | Implementada |
 | Merger | Reúne los mensajes de varias entradas en una salida | Implementado |
-| Splitter | Divide un mensaje en fragmentos mediante un xpath | Pendiente |
+| Splitter | Divide un mensaje en fragmentos mediante un xpath | Implementado |
 | Distribuidor | Envía cada mensaje a una salida según condiciones xpath | Pendiente |
 | Translator | Transforma el cuerpo con una plantilla XSLT | Implementado |
 | Correlator | Agrupa mensajes relacionados por un xpath | Pendiente |
