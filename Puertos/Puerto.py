@@ -1,15 +1,13 @@
-class Puerto:
+# Puertos/Puerto.py
+from abc import ABC
+
+class Puerto(ABC):
     """
     Clase abstracta. Punto de unión entre un conector y un slot.
     Guarda el slot al que está asociado; cada hijo define en qué dirección se usa.
     """
-    def __init__(self):
-        # Puertos/Puerto.py
-        from abc import ABC
+    def __init__(self, slot):
+        self._slot = slot
 
-        class Puerto(ABC):
-            def __init__(self, slot):
-                self._slot = slot
-
-            def get_slot(self):
-                return self._slot
+    def get_slot(self):
+        return self._slot

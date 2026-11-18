@@ -15,11 +15,15 @@ class Slot:
 
     def leer_mensaje(self):
         # saca y devuelve el primer mensaje (FIFO)
-        return self._lista_mensajes.popleft()
+        if self._lista_mensajes:
+            return self._lista_mensajes.popleft()
+        return None
 
     def siguiente_mensaje(self):
         # devuelve el primer mensaje sin sacarlo
-        return self._lista_mensajes[0]
+        if self._lista_mensajes:
+            return self._lista_mensajes[0]
+        return None
 
     def get_longitud_mensaje(self):
         # número de mensajes que hay en el slot

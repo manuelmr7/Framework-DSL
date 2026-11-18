@@ -12,4 +12,11 @@ class Distributor(Tarea):
         self._lista_xpath = list(lista_xpath)
 
     def ejecutar(self): #reparte cada mensaje a una salida según una condición xpath.
-        pass
+        entrada = self._lista_entradas[0]
+        while not entrada.esta_vacio():
+            mensaje = entrada.leer_mensaje()
+            for i, xpath in enumerate(self._lista_xpath):
+                if i < len(self._lista_salidas):
+                    if mensaje.get_cuerpo().xpath(xpath):
+                        self._lista_salidas[i].escribir_mensaje(mensaje)
+                        break

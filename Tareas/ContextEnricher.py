@@ -9,7 +9,7 @@ class ContextEnricher(Tarea):
     y copia el cuerpo del de contexto dentro de la raíz del principal.
     """
     def __init__(self, entradas, salidas):
-        super().__init__(entradas, salidas, Tipo.MODIFIER)
+        super().__init__(entradas, salidas, Tipo.MODIFICADORA)
 
     def ejecutar(self): #añade a un mensaje datos que llegan en otro.
         principal = self._lista_entradas[0]

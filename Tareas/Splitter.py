@@ -12,7 +12,7 @@ class Splitter(Tarea):
     su posición (id_secuencia) y el total de fragmentos (longitud).
     """
     def __init__(self, entradas, salidas, xpath):
-        super().__init__(entradas, salidas, Tipo.ROUTER)  # pon el Tipo que le corresponda en tu diseño
+        super().__init__(entradas, salidas, Tipo.TRANSFORMADORA)
         self._xpath = xpath
 
     def ejecutar(self):
