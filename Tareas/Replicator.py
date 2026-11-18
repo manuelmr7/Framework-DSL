@@ -3,6 +3,10 @@ from Tareas.Tarea import Tarea
 from Tareas.Tipo import Tipo
 
 class Replicator(Tarea):
+    """
+    Copia cada mensaje de la entrada a todas las salidas.
+    Usa deepcopy para que cada salida reciba su propio objeto.
+    """
     def __init__(self, entradas, salidas):
         super().__init__(entradas, salidas, Tipo.ENRUTADORA)
 

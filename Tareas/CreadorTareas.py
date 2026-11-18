@@ -13,6 +13,12 @@ from Tareas.Filter import Filter
 
 
 class CreadorTareas:
+    """
+    Factory method: crea cualquier tarea desde una única clase y un único método.
+    crear(tipo, entradas, salidas, *configuracion) busca en un diccionario la clase
+    asociada al TipoTarea y la construye. *configuracion recoge los parámetros propios
+    de cada tarea (xpath, ruta de un XSLT, etc.). La aplicación nunca instancia las tareas directamente.
+    """
     _clases = {
         TipoTarea.SPLITTER: Splitter,
         TipoTarea.DISTRIBUIDOR: Distributor,

@@ -3,6 +3,11 @@ from Tareas.Tarea import Tarea
 from Tareas.Tipo import Tipo
 
 class ContextEnricher(Tarea):
+    """
+    Añade a un mensaje datos que llegan en otro. Tiene dos entradas: la primera
+    trae el mensaje principal y la segunda el de contexto. Los empareja por orden
+    y copia el cuerpo del de contexto dentro de la raíz del principal.
+    """
     def __init__(self, entradas, salidas):
         super().__init__(entradas, salidas, Tipo.MODIFIER)
 

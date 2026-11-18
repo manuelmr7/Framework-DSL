@@ -2,6 +2,10 @@ from Tareas.Tarea import Tarea
 from Tareas.Tipo import Tipo
 
 class Merger(Tarea):
+    """
+    Reúne en una única salida los mensajes de todas las entradas,
+    vaciándolas una tras otra.
+    """
     def __init__(self, entradas, salidas):
         super().__init__(entradas, salidas, Tipo.ENRUTADORA)
 

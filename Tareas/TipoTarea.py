@@ -1,6 +1,10 @@
 from enum import Enum, auto
 
 class TipoTarea(Enum):
+    """
+    Enum que identifica cada tarea disponible (SPLITTER, REPLICATOR...).
+    Es la clave que usa CreadorTareas para decidir qué clase instanciar.
+    """
     SPLITTER = auto()
     DISTRIBUIDOR = auto()
     REPLICATOR = auto()

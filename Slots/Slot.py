@@ -1,6 +1,12 @@
 from collections import deque
 
 class Slot:
+    """
+    Cola FIFO de mensajes. Es el canal por el que se comunican tareas, puertos y conectores.
+    Los mensajes se escriben por el final y se leen por el principio.
+    leer_mensaje() saca el primero (o devuelve None si el slot está vacío);
+    siguiente_mensaje() lo consulta sin sacarlo.
+    """
     def __init__(self):
         self._lista_mensajes = deque()
 

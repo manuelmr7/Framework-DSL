@@ -4,6 +4,10 @@ from Tareas.Tipo import Tipo
 
 
 class Translator(Tarea):
+    """
+    Transforma el cuerpo de cada mensaje aplicando una plantilla XSLT (con lxml).
+    El mensaje conserva su id y su cabecera; solo cambia el cuerpo.
+    """
     def __init__(self,entradas,salidas,ruta_archivo_xslt):
         super().__init__(entradas,salidas,Tipo.TRANSFORMADORA)
         self.ruta_archivo_xslt=ruta_archivo_xslt
