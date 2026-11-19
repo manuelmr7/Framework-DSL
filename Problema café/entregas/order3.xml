@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<entrega>
+  <comanda>3</comanda>
+  <bebidas_listas>
+    <bebida tipo="cold">tonica</bebida>
+    <bebida tipo="cold">coca-cola</bebida>
+    <bebida tipo="hot">te</bebida>
+  </bebidas_listas>
+</entrega>

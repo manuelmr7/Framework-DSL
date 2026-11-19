@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<entrega>
+  <comanda>6</comanda>
+  <bebidas_listas>
+    <bebida tipo="cold">coca-cola</bebida>
+    <bebida tipo="cold">guarana</bebida>
+    <bebida tipo="cold">cerveza</bebida>
+    <bebida tipo="hot">te</bebida>
+    <bebida tipo="hot">tila</bebida>
+  </bebidas_listas>
+</entrega>

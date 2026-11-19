@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<entrega>
+  <comanda>7</comanda>
+  <bebidas_listas>
+    <bebida tipo="hot">cafe</bebida>
+    <bebida tipo="hot">te</bebida>
+    <bebida tipo="hot">tila</bebida>
+  </bebidas_listas>
+</entrega>

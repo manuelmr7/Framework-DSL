@@ -1,0 +1,91 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2908
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww29200\viewh18460\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 @startuml S1_splitter_simple\
+title Splitter\
+skinparam shadowing false\
+skinparam sequenceMessageAlign left\
+hide footbox\
+\
+participant App\
+participant Splitter\
+participant "Slot entrada" as E\
+participant Almacen\
+participant "Slot salida" as S\
+\
+App -> Splitter : ejecutar()\
+Splitter -> E : leerMensaje()\
+E --> Splitter : pedido\
+Splitter -> Almacen : guardarOriginal(pedido)\
+\
+loop por cada bebida del pedido\
+  Splitter -> Splitter : fragmentar(nodo, i, n)\
+  Splitter -> S : escribirMensaje(fragmento)\
+end\
+\
+note over Splitter\
+  fragmentar() pone en cada fragmento:\
+  idCorrelacion, idSecuencia y longitud\
+end note\
+@enduml\
+\
+@startuml S2_aggregator_simple\
+title Aggregator\
+skinparam shadowing false\
+skinparam sequenceMessageAlign left\
+hide footbox\
+\
+participant App\
+participant Aggregator\
+participant "Slot entrada" as E\
+participant Almacen\
+participant "Slot salida" as S\
+\
+App -> Aggregator : ejecutar()\
+Aggregator -> E : leerMensaje()\
+E --> Aggregator : fragmento\
+Aggregator -> Almacen : guardarFragmento(fragmento)\
+Aggregator -> Almacen : estaCompleto(idCorr)\
+Almacen --> Aggregator : si\
+\
+Aggregator -> Almacen : obtenerFragmentos(idCorr)\
+Almacen --> Aggregator : los n fragmentos\
+Aggregator -> Almacen : obtenerOriginal(idCorr)\
+Almacen --> Aggregator : pedido original\
+Aggregator -> Aggregator : ordenarPorSecuencia()\
+Aggregator -> Aggregator : reconstruir()\
+Aggregator -> S : escribirMensaje(pedido)\
+Aggregator -> Almacen : eliminar(idCorr)\
+\
+note over Aggregator\
+  Si estaCompleto() dice que no, el Aggregator\
+  no escribe nada y espera al siguiente fragmento.\
+end note\
+@enduml\
+\
+@startuml S3_resumen_simple\
+title Quien guarda que en el Almacen\
+skinparam shadowing false\
+skinparam sequenceMessageAlign left\
+hide footbox\
+\
+participant Splitter\
+participant "Tareas\\nintermedias" as T\
+participant Aggregator\
+participant Almacen\
+\
+Splitter -> Almacen : guardarOriginal(pedido)\
+Splitter -> T : fragmento SIN stock\
+T -> T : ContextEnricher anade el stock\
+T -> Aggregator : fragmento CON stock\
+Aggregator -> Almacen : guardarFragmento(fragmento)\
+\
+note over Splitter, Almacen\
+  El Splitter guarda lo que no viaja: el pedido original.\
+  El Aggregator guarda lo que viaja y cambia: los fragmentos.\
+end note\
+@enduml}

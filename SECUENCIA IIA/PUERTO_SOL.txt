@@ -1,0 +1,49 @@
+@startuml
+skinparam maxMessageSize 150
+participant "Conector" as CON
+participant "PS" as PS
+participant "S1" as S1
+participant "S2" as S2
+participant "T1" as T1
+participant "T2" as T2
+
+T1 -> S1 : escribir()
+activate T1
+activate S1
+deactivate S1
+deactivate T1
+
+...
+
+CON -> PS : leer()
+activate CON
+activate PS
+
+PS -> S1 : leer()
+activate S1
+
+S1 --> PS : msg
+deactivate S1
+
+PS --> CON : msg
+deactivate PS
+
+CON -> PS : escribir()
+activate PS
+
+PS -> S2 : escribir()
+activate S2
+deactivate S2
+deactivate PS
+deactivate CON
+
+...
+
+T2 -> S2 : leer()
+activate T2
+activate S2
+
+S2 --> T2 : msg
+deactivate S2
+deactivate T2
+@enduml

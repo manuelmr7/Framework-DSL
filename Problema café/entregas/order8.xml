@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<entrega>
+  <comanda>8</comanda>
+  <bebidas_listas>
+    <bebida tipo="cold">cerveza</bebida>
+    <bebida tipo="cold">guarana</bebida>
+    <bebida tipo="cold">guarana</bebida>
+    <bebida tipo="cold">tonica</bebida>
+    <bebida tipo="cold">tonica</bebida>
+    <bebida tipo="cold">coca-cola</bebida>
+  </bebidas_listas>
+</entrega>

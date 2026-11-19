@@ -1,0 +1,13 @@
+@startuml
+skinparam maxMessageSize 150
+participant "Conector" as CON
+participant "PuertoIN" as PIN
+participant "Slot" as SLOT
+
+    CON -> CON : run()
+    
+    CON -> PIN : mensajeSlot(new Mensaje(cuerpo))
+   
+    PIN -> SLOT : escribir mensaje
+    
+@enduml

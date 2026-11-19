@@ -1,0 +1,27 @@
+@startuml
+skinparam maxMessageSize 150
+participant "Conector" as CON
+participant "PuertoOUT" as POUT
+participant "Slot" as SLOT
+
+[-> CON : run
+activate CON
+
+CON -> POUT : Solicita Mensaje (Puerto)
+activate POUT
+
+POUT -> SLOT : Solicita Mensaje (Slot)
+activate SLOT
+
+SLOT --> POUT : msg
+deactivate SLOT
+
+POUT --> CON : msg
+deactivate POUT
+
+alt Si mensaje procesado
+    CON -> CON : escribir\nfichero local
+end
+
+deactivate CON
+@enduml
