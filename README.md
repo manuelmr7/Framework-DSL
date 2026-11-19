@@ -76,10 +76,10 @@ tarea = CreadorTareas.crear(
 | **Splitter** | Divide un mensaje XML en fragmentos mediante una expresión XPath | ✅ Implementada |
 | **Translator** | Transforma el cuerpo XML aplicando una plantilla XSLT | ✅ Implementada |
 | **ContextEnricher** | Enriquece el contenido de un mensaje combinándolo con datos de otro | ✅ Implementada |
-| **Distribuidor** | Enruta cada mensaje a una salida específica según condiciones XPath | 🚧 Pendiente |
-| **Correlator** | Agrupa mensajes relacionados a partir de un identificador XPath | 🚧 Pendiente |
-| **CorrelationIdSetter** | Asigna el identificador de correlación a mensajes relacionados | 🚧 Pendiente |
-| **Aggregator** | Reconstruye un mensaje completo a partir de sus fragmentos | 🚧 Pendiente |
+| **Distribuidor** | Enruta cada mensaje a una salida específica según condiciones XPath | ✅ Implementada |
+| **Correlator** | Agrupa mensajes relacionados a partir de un identificador XPath | ✅ Implementada |
+| **CorrelationIdSetter** | Asigna el identificador de correlación a mensajes relacionados | ✅ Implementada |
+| **Aggregator** | Reconstruye un mensaje completo a partir de sus fragmentos | ✅ Implementada |
 
 ---
 
